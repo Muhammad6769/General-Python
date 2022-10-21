@@ -5,15 +5,10 @@ def MedianArray(nums1: List[int], nums2: List[int]):
     lst.sort()
 
     length = len(lst)
-    count = 0
     middle = length / 2
-    for i in lst:
-        count += 1
-    if count % 2 == 0:
+    if length % 2 == 0:
         s = lst[int(middle)]
         f = lst[int(middle) - 1]
         return (f + s) / 2
     else:
         return lst[int(middle)]
-        
- 
